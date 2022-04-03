@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  HW2.3.1
-//
-//  Created by MacOS on 03.04.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +6,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 
