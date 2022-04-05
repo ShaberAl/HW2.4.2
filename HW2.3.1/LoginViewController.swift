@@ -13,12 +13,18 @@ class LoginViewController: UIViewController {
         userLogin.nameOfUser = "Welcome, \(userName)!"
     }
     
-    @IBAction func logButton() {
-        guard userNameTF.text == userName else { showAlert(); return }
-        guard userPasswordTF.text == password else { showAlert(); return }
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let exit = segue.source as? WelcomeViewController else { return }
         
         userNameTF.text?.removeAll()
         userPasswordTF.text?.removeAll()
+        
+        exit.dismiss(animated: true)
+    }
+    
+    @IBAction func logButton() {
+        guard userNameTF.text == userName else { showAlert(); return }
+        guard userPasswordTF.text == password else { showAlert(); userPasswordTF.text?.removeAll(); return }
     }
     
     @IBAction func showNameButton() {
