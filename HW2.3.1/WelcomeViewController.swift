@@ -5,12 +5,12 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView?
     
-    var nameOfUser: String!
+    var nameOfUser = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel?.text = nameOfUser
+        welcomeLabel?.text = "Welcome, \(nameOfUser)!"
         imageView?.image = UIImage(named: "J♥")
     }
 }

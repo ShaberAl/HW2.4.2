@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userLogin = segue.destination as? WelcomeViewController else { return }
         
-        userLogin.nameOfUser = "Welcome, \(userName)!"
+        userLogin.nameOfUser = userName
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
