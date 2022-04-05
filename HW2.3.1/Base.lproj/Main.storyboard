@@ -47,15 +47,15 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
                                                 <connections>
-                                                    <action selector="showNameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWp-bh-GA7"/>
+                                                    <action selector="showInfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gb-H4-UnP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jE-6P-Lfi">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jE-6P-Lfi">
                                                 <rect key="frame" x="182" y="0.0" width="172" height="41"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="showPasswordButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="azT-LX-2O5"/>
+                                                    <action selector="showInfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-kv-vtw"/>
                                                 </connections>
                                             </button>
                                         </subviews>

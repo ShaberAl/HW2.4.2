@@ -14,12 +14,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let exit = segue.source as? WelcomeViewController else { return }
-        
         userNameTF.text?.removeAll()
         userPasswordTF.text?.removeAll()
-        
-        exit.dismiss(animated: true)
     }
     
     @IBAction func logButton() {
@@ -27,12 +23,8 @@ class LoginViewController: UIViewController {
         guard userPasswordTF.text == password else { showAlert(); userPasswordTF.text?.removeAll(); return }
     }
     
-    @IBAction func showNameButton() {
-        showAlert(message: "Your login is \(userName)")
-    }
-    
-    @IBAction func showPasswordButton() {
-        showAlert(message: "Your password is \(password)")
+    @IBAction func showInfoButton(_ sender: UIButton) {
+        sender.tag == 0 ? showAlert(message: "Your login is \(userName)") : showAlert(message: "Your password is \(password)")
     }
 }
 
