@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-//MARK: Notification method
+//MARK: Notification method & keyboard
 extension LoginViewController {
     private func showAlert(title: String = "Information", message: String = "Incorrect login or password. Try again") {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -44,5 +44,11 @@ extension LoginViewController {
         
         alert.addAction(oKAction)
         present(alert, animated: true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
     }
 }

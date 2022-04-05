@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-js-JGe">
-                                <rect key="frame" x="30" y="351" width="354" height="194"/>
+                                <rect key="frame" x="30" y="331" width="354" height="194"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-X3-vmd">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="41"/>
@@ -36,7 +36,7 @@
                                         <state key="normal" title="Log in"/>
                                         <connections>
                                             <action selector="logButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVw-bb-b7G"/>
-                                            <segue destination="hYh-AP-6gJ" kind="presentation" identifier="" id="Lqj-nz-Syg"/>
+                                            <segue destination="hYh-AP-6gJ" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Lqj-nz-Syg"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="45a-fi-TyG">
@@ -68,7 +68,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CqT-js-JGe" secondAttribute="trailing" constant="30" id="BdT-u4-1WB"/>
                             <constraint firstItem="CqT-js-JGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="GfO-3y-KqL"/>
-                            <constraint firstItem="CqT-js-JGe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HNf-kd-6LJ"/>
+                            <constraint firstItem="CqT-js-JGe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="HNf-kd-6LJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -85,20 +85,28 @@
             <objects>
                 <viewController title="Welcome" id="hYh-AP-6gJ" customClass="WelcomeViewController" customModule="HW2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C8V-B1-WFg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZP-Vt-sfQ">
-                                <rect key="frame" x="40" y="124" width="334" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129.5" id="EH0-vt-JFr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mMB-o9-iUM">
+                                <rect key="frame" x="20" y="94" width="374" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZP-Vt-sfQ">
+                                        <rect key="frame" x="122.5" y="0.0" width="129.5" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129.5" id="EH0-vt-JFr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-2C-vux">
+                                        <rect key="frame" x="107" y="44" width="160" height="160"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6at-yc-U3S">
-                                <rect key="frame" x="168" y="400.5" width="78" height="41"/>
+                                <rect key="frame" x="168" y="348" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
@@ -110,14 +118,16 @@
                         <viewLayoutGuide key="safeArea" id="ghH-0L-gGf"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="ghH-0L-gGf" firstAttribute="trailing" secondItem="7ZP-Vt-sfQ" secondAttribute="trailing" constant="40" id="4UE-Vk-TVv"/>
-                            <constraint firstItem="7ZP-Vt-sfQ" firstAttribute="leading" secondItem="ghH-0L-gGf" secondAttribute="leading" constant="40" id="B1q-aS-ADJ"/>
+                            <constraint firstItem="mMB-o9-iUM" firstAttribute="leading" secondItem="ghH-0L-gGf" secondAttribute="leading" constant="20" id="00v-pY-nUT"/>
+                            <constraint firstItem="mMB-o9-iUM" firstAttribute="top" secondItem="ghH-0L-gGf" secondAttribute="top" constant="50" id="AdL-XX-TV4"/>
+                            <constraint firstItem="6at-yc-U3S" firstAttribute="top" secondItem="mMB-o9-iUM" secondAttribute="bottom" constant="50" id="LzG-WH-hPf"/>
                             <constraint firstItem="6at-yc-U3S" firstAttribute="centerX" secondItem="C8V-B1-WFg" secondAttribute="centerX" id="WKy-1X-UOB"/>
-                            <constraint firstItem="6at-yc-U3S" firstAttribute="centerY" secondItem="C8V-B1-WFg" secondAttribute="centerY" id="bil-F9-s8f"/>
-                            <constraint firstItem="7ZP-Vt-sfQ" firstAttribute="top" secondItem="ghH-0L-gGf" secondAttribute="top" constant="80" id="kAi-Hk-n8p"/>
+                            <constraint firstItem="mMB-o9-iUM" firstAttribute="centerX" secondItem="C8V-B1-WFg" secondAttribute="centerX" id="mwt-5e-p4L"/>
+                            <constraint firstItem="ghH-0L-gGf" firstAttribute="trailing" secondItem="mMB-o9-iUM" secondAttribute="trailing" constant="20" id="qQQ-6d-s6d"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="Jj3-2C-vux" id="cw9-1V-8vH"/>
                         <outlet property="welcomeLabel" destination="7ZP-Vt-sfQ" id="UDP-sO-9M7"/>
                     </connections>
                 </viewController>
