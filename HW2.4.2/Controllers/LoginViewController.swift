@@ -4,13 +4,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var userPasswordTF: UITextField!
     
-    private let userName = "Homework"
-    private let password = "Password"
+    private let userName = User.getUserInfo().login
+    private let password = User.getUserInfo().password
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userLogin = segue.destination as? WelcomeViewController else { return }
         
-        userLogin.nameOfUser = userName
+        userLogin.nameOfUser = User.getUserInfo().person.fullname
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
