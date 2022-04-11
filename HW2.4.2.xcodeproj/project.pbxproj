@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2291516827FC278F00F537DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		22D13D7427F9D271001E36CF /* HW2.3.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.3.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D13D7427F9D271001E36CF /* HW2.4.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.4.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D13D7727F9D271001E36CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D13D7927F9D271001E36CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22D13D7B27F9D271001E36CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -39,10 +39,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224E323228041543005F1AE8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				22D13D8527F9D273001E36CF /* Info.plist */,
+				22D13D7927F9D271001E36CF /* SceneDelegate.swift */,
+				22D13D7727F9D271001E36CF /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		224E323328041560005F1AE8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				22D13D8027F9D273001E36CF /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		224E32342804156D005F1AE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2291516827FC278F00F537DA /* WelcomeViewController.swift */,
+				22D13D7B27F9D271001E36CF /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		224E32352804157C005F1AE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22D13D8227F9D273001E36CF /* LaunchScreen.storyboard */,
+				22D13D7D27F9D271001E36CF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		224E323628041586005F1AE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		22D13D6B27F9D271001E36CF = {
 			isa = PBXGroup;
 			children = (
-				22D13D7627F9D271001E36CF /* HW2.3.1 */,
+				22D13D7627F9D271001E36CF /* HW2.4.2 */,
 				22D13D7527F9D271001E36CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +93,29 @@
 		22D13D7527F9D271001E36CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22D13D7427F9D271001E36CF /* HW2.3.1.app */,
+				22D13D7427F9D271001E36CF /* HW2.4.2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22D13D7627F9D271001E36CF /* HW2.3.1 */ = {
+		22D13D7627F9D271001E36CF /* HW2.4.2 */ = {
 			isa = PBXGroup;
 			children = (
-				22D13D7727F9D271001E36CF /* AppDelegate.swift */,
-				22D13D7927F9D271001E36CF /* SceneDelegate.swift */,
-				22D13D7B27F9D271001E36CF /* LoginViewController.swift */,
-				2291516827FC278F00F537DA /* WelcomeViewController.swift */,
-				22D13D7D27F9D271001E36CF /* Main.storyboard */,
-				22D13D8027F9D273001E36CF /* Assets.xcassets */,
-				22D13D8227F9D273001E36CF /* LaunchScreen.storyboard */,
-				22D13D8527F9D273001E36CF /* Info.plist */,
+				224E323628041586005F1AE8 /* Models */,
+				224E32352804157C005F1AE8 /* Views */,
+				224E32342804156D005F1AE8 /* Controllers */,
+				224E323328041560005F1AE8 /* Assets */,
+				224E323228041543005F1AE8 /* Support */,
 			);
-			path = HW2.3.1;
+			path = HW2.4.2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22D13D7327F9D271001E36CF /* HW2.3.1 */ = {
+		22D13D7327F9D271001E36CF /* HW2.4.2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22D13D8827F9D273001E36CF /* Build configuration list for PBXNativeTarget "HW2.3.1" */;
+			buildConfigurationList = 22D13D8827F9D273001E36CF /* Build configuration list for PBXNativeTarget "HW2.4.2" */;
 			buildPhases = (
 				22D13D7027F9D271001E36CF /* Sources */,
 				22D13D7127F9D271001E36CF /* Frameworks */,
@@ -85,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = HW2.3.1;
+			name = HW2.4.2;
 			productName = HW2.3.1;
-			productReference = 22D13D7427F9D271001E36CF /* HW2.3.1.app */;
+			productReference = 22D13D7427F9D271001E36CF /* HW2.4.2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 22D13D6F27F9D271001E36CF /* Build configuration list for PBXProject "HW2.3.1" */;
+			buildConfigurationList = 22D13D6F27F9D271001E36CF /* Build configuration list for PBXProject "HW2.4.2" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22D13D7327F9D271001E36CF /* HW2.3.1 */,
+				22D13D7327F9D271001E36CF /* HW2.4.2 */,
 			);
 		};
 /* End PBXProject section */
@@ -293,7 +333,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G376QDA776;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW2.3.1/Info.plist;
+				INFOPLIST_FILE = HW2.4.2/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HW2.4.2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +363,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G376QDA776;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW2.3.1/Info.plist;
+				INFOPLIST_FILE = HW2.4.2/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HW2.4.2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22D13D6F27F9D271001E36CF /* Build configuration list for PBXProject "HW2.3.1" */ = {
+		22D13D6F27F9D271001E36CF /* Build configuration list for PBXProject "HW2.4.2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22D13D8627F9D273001E36CF /* Debug */,
@@ -354,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22D13D8827F9D273001E36CF /* Build configuration list for PBXNativeTarget "HW2.3.1" */ = {
+		22D13D8827F9D273001E36CF /* Build configuration list for PBXNativeTarget "HW2.4.2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22D13D8927F9D273001E36CF /* Debug */,
