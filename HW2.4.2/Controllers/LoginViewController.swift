@@ -4,13 +4,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var userPasswordTF: UITextField!
     
-    private let userName = User.getUserInfo().login
-    private let password = User.getUserInfo().password
+    private let user = User.getUserInfo()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userLogin = segue.destination as? WelcomeViewController else { return }
         
-        userLogin.nameOfUser = User.getUserInfo().person.fullname
+        userLogin.nameOfUser = user.person.fullname
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -19,12 +18,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logButton() {
-        guard userNameTF.text == userName else { showAlert(); return }
-        guard userPasswordTF.text == password else { showAlert(); userPasswordTF.text?.removeAll(); return }
+        guard userNameTF.text == user.login else { showAlert(); return }
+        guard userPasswordTF.text == user.password else { showAlert(); userPasswordTF.text?.removeAll(); return }
     }
     
     @IBAction func showInfoButton(_ sender: UIButton) {
-        sender.tag == 0 ? showAlert(message: "Your login is \(userName)") : showAlert(message: "Your password is \(password)")
+        sender.tag == 0 ? showAlert(message: "Your login is \(user.login)") : showAlert(message: "Your password is \(user.password)")
     }
 }
 
